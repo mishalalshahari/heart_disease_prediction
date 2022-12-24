@@ -11,11 +11,11 @@ import streamlit as st
 import base64
 
 #loading the saved model
-loaded_model = pickle.load(open('F:/Projects/Heart Disease Prediction - ML/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 def add_bg_from_local(image_file):
-    with open('F:/Projects/Heart Disease Prediction - ML/bg.jpg', "rb") as image_file:
+    with open('bg.jpg', "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
     st.markdown(
     f"""
@@ -102,15 +102,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
